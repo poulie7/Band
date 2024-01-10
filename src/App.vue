@@ -1,18 +1,34 @@
 <script>
-import topComponent from '@/components/TopComponent.vue'
-import secondComponent from '@/components/SecondComponent.vue'
+import NavigationComponent from '@/components/NavComponent.vue' 
+import FooterComponent from '@/components/FooterComponent.vue'
+
 export default {
   components: {
-    topComponent,
-    secondComponent
-  }
+    NavigationComponent,
+    FooterComponent
+  },
+  data() {
+    return {
+      showNav: false
+    }
+  },
+  methods: {
+    toggleNav() {
+      if (this.$route.path === '/') 
+      this.showNav = false;
+      else {
+      this.showNav = true;
+    }
+    } 
+    }
 }
 </script>
 
 <template>
   <main>
-    <topComponent />
-    <secondComponent />
+    <NavigationComponent  v-if="showNav"/>
+      <router-view />
+    <FooterComponent />
   </main>
 </template>
 

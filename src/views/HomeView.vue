@@ -1,26 +1,31 @@
 <script>
-import navigation from '@/components/NavComponent.vue'
+import topComponent from '@/components/TopComponent.vue'
+import secondComponent from '@/components/SecondComponent.vue'
+import thirdComponent from '@/components/ThirdComponent.vue'
+import forthComponent from '@/components/ForthComponent.vue'
+
 export default {
   components: {
-    navigation
+    topComponent,
+    secondComponent,
+    thirdComponent,
+    forthComponent,
   }
 }
 </script>
 
 <template> 
-  <main class="home">
-    <navigation />
+  <main>
+    
+    <topComponent />
+    <secondComponent />
+    <thirdComponent />
+    <forthComponent />
   </main>
 </template>
 
 <style scoped>
-.home {
-  background-image: url('../assets/images/main_picture.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-size: 100% auto; 
-  min-height: 100vh;
-
+h1 {
+  color: white;
 }
-
 </style>
